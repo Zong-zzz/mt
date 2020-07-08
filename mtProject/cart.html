@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/index copy.css">
+    <script src="js/foods.js"></script>
+</head>
+<body>
+    <!-- 顶部 -->
+    <header>
+        <ul>
+            <li><img src="img/ceiling-logo2.png" alt=""></li>
+            <li>
+                <input type="text" name="" id="" placeholder="搜索商家、美食">
+                <a>搜索</a>
+            </li>
+        </ul>
+    </header>
+    <!-- 导航至购物车 -->
+    <div>
+        <a onclick="cartOpen()">我的购物车</a>
+        <span>(</span>
+        <span id="cart_num">0</span>
+        <span>)</span>
+    </div>
+    <!-- 购物车 -->
+    <div id="cart">
+        <table id="tab">
+            <tr>
+                <th>全选<input type="checkbox" name="" id="sa" onclick="slcAll(this)"></th>
+                <th>菜品</th>
+                <th>价格（元/份）</th>
+                <th>数量</th>
+                <th>操作</th>
+            </tr>
+        </table>
+        <hr>
+        <ul>
+            <li><input type="button" value="删除选中" onclick="delslc()"></li>
+            <li>
+                合计￥<span id="total">0</span>
+                <input type="button" value="结算" onclick="buy()">
+            </li>
+        </ul>
+        <p><a onclick="cartClose()">继续任性点餐</a></p>
+    </div>
+    <script src="js/index copy.js"></script>
+</body>
+</html>
